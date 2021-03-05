@@ -21,7 +21,7 @@ class TextAdventure(commands.Cog):
             await ctx.send_help(ctx.command)
 
     @text_adv_group.command(name="make")
-    async def make(self, ctx: commands.Context):
+    async def make(self, ctx: commands.Context) -> None:
         """Returns a link to help make your own campaign."""
         embed = discord.Embed(
             title="Making a Campaign",
@@ -32,7 +32,8 @@ class TextAdventure(commands.Cog):
             value="Go to [this link](http://bit.ly/3rnhGqN) for a guide!"
         )
         await ctx.send(embed=embed)
-        
+
 
 def setup(bot: commands.Bot) -> None:
+    """Loads the adventure cog."""
     bot.add_cog(TextAdventure(bot))
