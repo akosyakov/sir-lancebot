@@ -14,12 +14,25 @@ class TextAdventure(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(aliases=["adventure"])
-    async def text_adventure(self, ctx: commands.Context, command: str = 'start') -> None:
-        """Play a text based adventure in python."""
+    @commands.group(name="text_adventure", aliases=("adventure", "adv"))
+    async def text_adv_group(self, ctx: commands.Context) -> None:
+        """Group containing text_adventure commands."""
+        if not ctx.invoked_subcommand:
+            await ctx.send_help(ctx.command)
+
+    @text_adv_group.command(name="make")
+    async def make(self, ctx: commands.Context):
+        """Returns a link to help make your own campaign."""
         embed = discord.Embed(
-            name="Text Adventure",
-            description="a WIP",
+            title="Making a Campaign",
             color=Colours.python_blue
         )
+        embed.add_field(
+            name="Wanting to make a campaign?",
+            value="Go to [this link](http://bit.ly/3rnhGqN) for a guide!"
+        )
         await ctx.send(embed=embed)
+        
+
+def setup(bot: commands.Bot) -> None:
+    bot.add_cog(TextAdventure(bot))
