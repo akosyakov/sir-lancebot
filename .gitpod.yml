@@ -1,0 +1,9 @@
+image: gitpod/workspace-full
+
+tasks:
+    - init: pip install pipenv && pipenv sync --dev
+      
+
+
+
+      

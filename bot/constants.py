@@ -209,6 +209,10 @@ class Emojis:
     status_dnd = "<:status_dnd:470326272082313216>"
     status_offline = "<:status_offline:470326266537705472>"
 
+    textadv_a = "\N{REGIONAL INDICATOR SYMBOL LETTER A}"
+    textadv_b = "\N{REGIONAL INDICATOR SYMBOL LETTER B}"
+    textadv_c = "\N{REGIONAL INDICATOR SYMBOL LETTER C}"
+
 
 class Icons:
     questionmark = "https://cdn.discordapp.com/emojis/512367613339369475.png"

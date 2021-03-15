@@ -1,0 +1,19 @@
+{
+    "title": "Monty Python and the Golden Idol",
+    "part1": {
+        "prompt": "You are Monty Python, a famous explorer. Your latest adventure has you trying to recover the golden idol of PyDis from an ancient temple. There are two hallways in the temple entrance. Which one do you go in to?",
+        "c1": "The left hallway",
+        "c2": "The right hallway",
+        "ei": {
+            "c1": "a",
+            "c2": "b"
+        }
+    },
+    "part2a": {
+        "prompt": "pog",
+        "c1": "champ",
+        "ei": {
+            "c1": "a"
+        }
+    }
+}
